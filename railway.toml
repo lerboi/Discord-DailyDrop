@@ -1,0 +1,13 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+# This defines when the script runs (Daily at 12:00 PM UTC)
+cronSchedule = "0 12 * * *"
+
+# Important: A cron job should never restart automatically. 
+# It should run once, finish, and wait for the next schedule.
+restartPolicyType = "never"
+
+# The command Railway uses to run your script
+startCommand = "python main.py"
