@@ -5,11 +5,11 @@ import sys
 # Configuration from Environment Variables
 API_URL = "https://anione.me/api/discord/generate-daily-drop"
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
-INTERNAL_API_KEY = os.getenv("INTERNAL_API_KEY")
+DISCORD_DAILY_DROP_KEY = os.getenv("DISCORD_DAILY_DROP_KEY")  # CHANGED
 
 def trigger_daily_drop():
     headers = {
-        "X-API-KEY": INTERNAL_API_KEY,
+        "x-discord-daily-drop-key": DISCORD_DAILY_DROP_KEY,  # CHANGED
         "Content-Type": "application/json"
     }
     
