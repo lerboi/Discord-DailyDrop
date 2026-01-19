@@ -84,7 +84,7 @@ def fetch_promo_code() -> Optional[str]:
 
 def send_discord_webhook(promo_code: str) -> bool:
     """Send promo code to Discord webhook."""
-    redeem_link = f"https://www.anione.me/en/Profile?tab=redeem&code={promo_code}"
+    redeem_link = f"https://www.anione.me/en/Profile?tab=redeem&code={promo_code}&ref_code=disc"
     
     payload = {
         "username": "Momo Yaoyorozu",
